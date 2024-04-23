@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Honk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Merienda:wght@300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap');
+
+.skip{
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: black;
+    color: white;
+    opacity: 0;
+}
+
+.skip:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+.popcorn{
+    background-image: url("../images/abstract-pentagon-background-technology-science-hitech-communication-concept-innovation-yellow-orange-white-vector-design_116849-1781.avif");
+    background-size: cover;
+}
+
+h1{
+    font-size: 90px;
+    padding: 30px;
+    text-align: center;
+    font-family: "Honk", system-ui;
+    font-weight: 400;
+   
+}
+
+header{
+    text-align: right;
+}
+
+.movie nav ul {
+    display: flex; 
+    list-style-type: none;
+    padding: 20px;
+    justify-content: flex-end;
+    margin-right: 27px;
+    font-family: "Handlee", cursive;
+    font-size: 15px;
+}
+.movie nav ul li {
+    margin-right: 5px; 
+}
+
+.movie nav ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(211, 75, 182);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.movie nav ul li a:hover {
+    background-color: white;
+}
+
+footer {
+    background-image: linear-gradient(to right, #fff200, #ffeb3b, #fdd835, #fbc02d, #f9a825);
+    color: #333;
+    text-align: center;
+    padding: 10px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.lovers{
+    font-family: "Handlee", cursive;
+    font-weight: 100;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 2;
+    border: solid black;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(255, 216, 61);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-out forwards; 
+    opacity: 0; 
+    transition: background-color 0.3s ease; 
+}
+
+.lovers:hover {
+    background-color: #d9bbbb; 
+}
+
+h2{
+    font-family: "Handlee", cursive;
+    font-weight: 400;
+    font-size: 30px;
+    padding-left: 60px;
+    padding-top: 30px;
+    color: black;
+}
+
+.picks,.trending,.newrelease{
+    display: flex;
+    overflow-x: auto; 
+    scroll-behavior: smooth;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    margin-right: 50px;
+}
+
+.picks img,.trending img,.newrelease img {
+    width: 200px; 
+    height: auto; 
+    margin-left: 5px; 
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: solid 5px black;
+    border-radius: 10px;
+    box-shadow: 15px 15px 15px rgba(14, 14, 14, 0.5);
+}
+
+.picks img:hover, .trending img:hover, .newrelease img:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+.modal-content {
+    background-color: rgb(190, 182, 150); 
+    border: solid 3px black;
+    font-family: "Handlee", cursive;
+    font-weight: 100;
+    font-size: 20px;
+    text-align: left;
+    margin: 15% auto;
+    padding: 20px;
+    width: 70%; 
+    line-height: 2;
+    opacity: 0; 
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.more-info-btn {
+    padding: 5px;
+    margin: 10px 0;
+    background-color: rgb(211, 75, 182);  
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid black;  
+  }
+  
+  .more-info-btn:hover {
+    background-color: black;  
+    border-color: white;  
+  }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1rem; 
+    padding: 1rem;
+    justify-items: center;
+    margin-right: 30px;
+}
+.searching{
+    font-family: "Handlee", cursive;
+    float: right;
+    width: 200px;
+    padding: 15px;
+}
+.container h3{
+    color: black;
+    font-family: "Handlee", cursive;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 5px;
+    text-align: center;
+}
+.fav h2{
+    font-family: "Handlee", cursive;
+    font-size: 25px;
+    padding-left: 60px;
+    padding-top: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.fav{
+    font-family: "Handlee", cursive;
+    text-align: center;
+    font-weight: 100;
+    color: black;
+    font-size: 25px;
+    line-height: 2;
+    border: solid black;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 50px;
+    background-image: linear-gradient(to right, #ffda3d, #ffac30);
+}
+
+.fav::after {
+    animation: blink 1s step-end infinite;
+}
+
+/* Typewriter effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.fav.typewriter {
+    animation: typing 3s steps(40, end);
+}
+
+.container p{
+    color: black;
+    font-family: "Handlee", cursive;
+    font-size: 15px;
+    padding-top: 5px;
+    text-align: center;
+    line-height: 2;
+    padding: 5px;
+}
+
+.card {
+    width: 100%;
+    max-width: 250px; 
+    height: 400px; 
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+    transform-style: preserve-3d; 
+    transition: transform 0.6s; 
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg); /* Card rotating 180 degrees on the Y-axis */
+}
+
+.card .face1,
+.card .face2 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black; 
+    border-radius: 8px; 
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 25px 25px 25px rgb(98, 97, 97);
+}
+
+.face2 {
+    background: #f8f8f8;
+    transform: rotateY(180deg);
+}
+
+.card .content img {
+    width: 220px; 
+    height: 350px; 
+    object-fit: cover; 
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px; 
+}
+
+.card .face2{
+    transform: rotateY(180deg);
+}
+
+.movie nav {
+    color: black;
+    text-decoration: none;
+    font-family: "Handlee", cursive;
+    font-size: 15px;
+}
+
+.tick {
+    background-image: url("../images/abstract-pentagon-background-technology-science-hitech-communication-concept-innovation-yellow-orange-white-vector-design_116849-1781.avif");
+    background-color: #1e1f26; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: space-evenly;
+    width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Joan', serif;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    background-color: #cd8c38;
+    border-radius: 2rem;
+    color: #1e1f26;
+    transition: .3s;
+}
+.btn:hover {
+    background-color: #92601f;
+}
+.btn-l {
+    width: 100%;
+    text-align: center;
+}
+
+.film-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-container {
+    color: #adadad;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+}
+
+.upcoming-img-box {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+@keyframes flashing {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.film-container h2 {
+    font-family: "Jersey 10 Charted", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    padding: 5px;
+    animation: flashing 1s infinite; 
+}
+.film-container h2{
+    font-family: "Jersey 10 Charted", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    padding: 5px;
+    
+}
+
+.upcoming-title {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: #cd8c38;
+    background-color: #1e1f26;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid #cd8c38;
+    font-weight: 500;
+}
+
+.show{
+    font-family: "Handlee", cursive;
+    text-align: left;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.btn-alt {
+    background-color: #1e1f26;
+    color: #cd8c38;
+    border: 1px solid #cd8c38;
+    margin-left: 1rem;
+}
+.btn-alt:hover {
+    color: #1e1f26;
+    background-color: #cd8c38;
+}
+
+.cm-img-box {
+    border: solid orange;
+    position: relative;
+    display: flex;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    background-size: cover;
+
+}
+
+.film-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+}
+
+.upcoming-img-box {
+    padding: 5px;
+    grid-column: 1 / -1; 
+}
+
+.current-movies {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+}
+    
+
+.current-movie {
+    background: linear-gradient(to right,#fdd835, #fbc02d, #f9a825);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.movie-title {
+    color: black;
+    margin-bottom: .2rem;
+}
+.booking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.price {
+    color: #cd8c38;
+}
+
+.screen-name{
+    color: black;
+}
+
+@media (min-width: 500px) {
+    .current-movies {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 800px) {
+    .current-movies {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
